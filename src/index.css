@@ -37,4 +37,7 @@ main {
   aspect-ratio: 1/1;
   background-color: #232323;
   border-radius: .5rem;
+  background-image: none;
+  background-position: center;
+  background-size: contain;
 }

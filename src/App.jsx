@@ -1,14 +1,15 @@
 import boxData from "./boxes"
 import { useState } from "react"
-import "./index.css"
+import Box from "./components/Box"
 
 function App() {
   const [boxArr, setBoxArr] = useState(boxData)
-  const boxEl = boxArr.map(box => {
-    return (
-      <div className="box" key={box.id}></div>
-    )
-  })
+  const boxEl = boxArr.map(box => (
+    <Box
+      key={box.id}
+      on={box.on}
+    />
+  ))
 
   return (
     <>
