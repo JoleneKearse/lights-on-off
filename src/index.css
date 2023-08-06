@@ -29,7 +29,7 @@ main {
   display: grid;
   grid-template-rows: repeat(1, 1fr);
   grid-template-columns: repeat(3, 1fr);
-  gap: .5rem;
+  gap: 1rem;
 }
 
 .box {
@@ -40,4 +40,5 @@ main {
   background-image: none;
   background-position: center;
   background-size: contain;
+  box-shadow: .25rem .25rem .5rem #232323CC;
 }
