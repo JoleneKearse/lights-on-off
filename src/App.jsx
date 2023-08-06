@@ -4,10 +4,21 @@ import Box from "./components/Box"
 
 function App() {
   const [boxArr, setBoxArr] = useState(boxData)
+  
+  function toggle(id) {
+    setBoxArr(prevBoxArr => {
+      return prevBoxArr.map((box) => {
+        return box.id === id ? {...box, on: !box.on} : box
+      })
+    })
+  }
+
   const boxEl = boxArr.map(box => (
     <Box
       key={box.id}
+      id={box.id}
       on={box.on}
+      toggle={toggle}
     />
   ))
 
