@@ -6,11 +6,11 @@ function App() {
   const [boxArr, setBoxArr] = useState(boxData)
   
   function toggle(id) {
-    setBoxArr(prevBoxArr => {
-      return prevBoxArr.map((box) => {
-        return box.id === id ? {...box, on: !box.on} : box
-      })
-    })
+    setBoxArr(prevBoxArr => 
+      prevBoxArr.map((box) => 
+        box.id === id ? {...box, on: !box.on} : box
+      )
+    )
   }
 
   const boxEl = boxArr.map(box => (
